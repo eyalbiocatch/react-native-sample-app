@@ -1,6 +1,10 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+plugin 'cocoapods-art', :sources => [
+  'biocatch-cocoapods-release' # Here should place the LOCAL alias of the artifactor ( > pod repo-art )
+]
+
 platform :ios, '11.0'
 install! 'cocoapods', :deterministic_uuids => false
 
