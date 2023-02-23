@@ -14,7 +14,7 @@
     "@react-navigation/native-stack": "^6.9.10",
     "react": "17.0.2",
     "react-native": "0.68.2",
-    "react-native-biocatch": "git+https://eyalbiocatch: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@github.com/biocatchltd/react-native-biocatch.git#2.0.5",
+    "react-native-biocatch": "https://eyalbiocatch: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@github.com/biocatchltd/react-native-biocatch.git#2.0.8a",
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "^3.20.0"
   },
