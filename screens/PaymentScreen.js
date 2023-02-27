@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import TextField from '../components/TextField';
+import { BCChangeContext } from '../BCSDKClientManager';
 export const IMAGELOGO = require('../assets/images/BioCatch_Logo.png');
 
 const PaymantScreen = props => {
