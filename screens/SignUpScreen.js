@@ -22,8 +22,6 @@ const SignUpScreen = props => {
   const { navigation } = props
   console.log(" navigation: " + navigation);
 
-  const isLogin = useSelector(state => state.users.isLoggedIn);
-
   return (
     <SafeAreaView>
       <ScrollView>
