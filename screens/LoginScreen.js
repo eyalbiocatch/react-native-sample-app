@@ -93,6 +93,7 @@ const LoginScreen = props => {
 
 const style = StyleSheet.create({
   screen: {
+    flex: 1,
     alignItems: 'center',
   },
   mainHeaderContainer: {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   TouchableWithoutFeedback,
   Keyboard,
@@ -10,7 +10,6 @@ import {
   SafeAreaView,
 } from 'react-native';
 import TextField from '../components/TextField';
-import BioCatch from 'react-native-biocatch';
 import {BCChangeContext} from '../BCSDKClientManager';
 
 const SignUpScreen = props => {

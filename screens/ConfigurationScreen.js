@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TouchableWithoutFeedback, Keyboard, StyleSheet, Text, View, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
-import {useSelector, useDispatch } from 'react-redux'
 import TextField from '../components/TextField'
-import BioCatch from 'react-native-biocatch';
 
 const ConfigurationScreen = props => {
-try {
-    const res = BCChangeContext('CONFIGURATION');
+    try {
+        const res = BCChangeContext('CONFIGURATION');
     } catch (error) {
     console.log(`error: ${error}`);
     }

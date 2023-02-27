@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity } from 'react-native';
 export const IMAGELOGO = require('../assets/images/BioCatch_Logo.png'); 
 
 const PreLoginScreen = props => {

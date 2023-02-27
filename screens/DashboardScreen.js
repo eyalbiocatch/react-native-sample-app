@@ -13,6 +13,9 @@ import {makeid} from '../utils/Helper';
 
 const DashboardScreen = props => {
   const {navigation} = props;
+  const gotoPayment = () => {
+    navigation.navigate('Payment');
+  }
   const logoutUser = () => {
     try {
       const csid = makeid(32);
@@ -34,10 +37,15 @@ const DashboardScreen = props => {
       <View style={style.screen}>
         <View
           style={{
-            flex: 1,
+            flex: 0.5,
             flexDirection: 'column',
             justifyContent: 'space-between',
-          }}></View>
+          }}/>
+        <TouchableOpacity
+          style={style.upperButtonContainer}
+          onPress={() => gotoPayment()}>
+          <Text style={style.mainButtonText}>Payment</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={style.mainButtonContainer}
           onPress={() => logoutUser()}>
@@ -54,11 +62,21 @@ const style = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ebebeb',
   },
-  mainButtonContainer: {
+  upperButtonContainer: {
     backgroundColor: '#4793CF',
+    alignItems: 'center',
+    width: 320,
     borderRadius: 5,
     padding: 10,
-    paddingHorizontal: 64,
+    margin: 20,
+    marginBottom: 5,
+  },
+  mainButtonContainer: {
+    backgroundColor: '#4793CF',
+    alignItems: 'center',
+    width: 320,
+    borderRadius: 5,
+    padding: 10,
     margin: 20,
     marginBottom: 32,
   },
@@ -66,15 +84,8 @@ const style = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
   },
-
   textView: {
     fontSize: 18,
-  },
-  buttonContainer: {
-    padding: 10,
-    paddingHorizontal: 64,
-    marginBottom: 32,
-    color: '#4793CF',
   },
 });
 

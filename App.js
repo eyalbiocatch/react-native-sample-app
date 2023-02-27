@@ -12,31 +12,15 @@ import {makeid} from './utils/Helper';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import PreLoginScreen from "./screens/PreLoginScreen";
-import LoginScreen from "./screens/LoginScreen";
-import DashboardScreen from "./screens/DashboardScreen";
-import SignUpScreen from "./screens/SignUpScreen";
-import ConfigurationScreen from "./screens/ConfigurationScreen";
+import PreLoginScreen from './screens/PreLoginScreen';
+import LoginScreen from './screens/LoginScreen';
+import DashboardScreen from './screens/DashboardScreen';
+import SignUpScreen from './screens/SignUpScreen';
+import ConfigurationScreen from './screens/ConfigurationScreen';
+import PaymantScreen from './screens/PaymentScreen';
 
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -86,6 +70,11 @@ const App: () => Node = () => {
           name="Configuration"
           component={ConfigurationScreen}
           options={{title: 'Configuration Screen'}}
+        />
+        <Stack.Screen
+          name="Payment"
+          component={PaymantScreen}
+          options={{title: 'Payment Screen'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
