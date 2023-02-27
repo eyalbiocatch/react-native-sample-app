@@ -31,7 +31,7 @@ const PaymantScreen = props => {
         />
         <View style={{height: 24}}></View>
         <TextField
-          placeholder="Insert mount to transfer"
+          placeholder="Insert amount to transfer"
           title="Amount"
           accessibilityId="amount"
         />
