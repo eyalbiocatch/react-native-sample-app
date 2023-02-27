@@ -14,16 +14,14 @@ import BioCatch from 'react-native-biocatch';
 import {BCChangeContext} from '../BCSDKClientManager';
 
 const SignUpScreen = props => {
-  const dispatch = useDispatch();
-  const toggleIsLoggedIn = () => {
-    dispatch(setLoggedIn(true));
-  };
   try {
     const res = BCChangeContext('REGISTER');
   } catch (error) {
     console.log(`error: ${error}`);
   }
-  const {navigation} = props;
+  const { navigation } = props
+  console.log(" navigation: " + navigation);
+
   const isLogin = useSelector(state => state.users.isLoggedIn);
 
   return (
@@ -61,7 +59,9 @@ const SignUpScreen = props => {
             <View style={{height: 32}}></View>
             <TouchableOpacity
               style={style.mainButtonContainer}
-              onPress={() => toggleIsLoggedIn()}>
+              onPress={() => {
+                navigation.goBack();
+              }}>
               <Text style={style.mainButtonText}>Sign In</Text>
             </TouchableOpacity>
             <View style={{flexDirection: 'row'}}>

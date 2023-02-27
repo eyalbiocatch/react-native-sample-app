@@ -5,6 +5,14 @@ import TextField from '../components/TextField'
 import BioCatch from 'react-native-biocatch';
 
 const ConfigurationScreen = props => {
+try {
+    const res = BCChangeContext('CONFIGURATION');
+    } catch (error) {
+    console.log(`error: ${error}`);
+    }
+    const { navigation } = props
+    console.log(" navigation: " + navigation);
+    
     return (
         <SafeAreaView>
             <ScrollView>
@@ -25,7 +33,9 @@ const ConfigurationScreen = props => {
                         <View style={{ height: 32 }}></View>
                         <TouchableOpacity
                             style={style.mainButtonContainer}
-                            onPress={() => toggleIsLoggedIn() }>
+                            onPress={() => {
+                                navigation.goBack()
+                            }}>
                             <Text style={style.mainButtonText}>Sign In</Text>
                         </TouchableOpacity>
                         <View style={{ flexDirection: "row" }}>
