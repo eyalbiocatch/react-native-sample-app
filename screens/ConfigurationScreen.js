@@ -17,17 +17,17 @@ const ConfigurationScreen = props => {
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
                     <View style={style.screen}>
                     <View style={{ height: 24 }}></View>
-                        <TextField placeholder="Insert your user name" title="User Name" />
+                        <TextField placeholder="Insert your user name" title="User Name" accessibilityId="user_name"/>
                         <View style={{ height: 24 }}></View>
-                        <TextField placeholder="Insert your password" title="Password" />
+                        <TextField placeholder="Insert your password" title="Password" accessibilityId="password"/>
                         <View style={{ height: 32 }}></View>
-                        <TextField placeholder="Insert your first name" title="First Name" />
+                        <TextField placeholder="Insert your first name" title="First Name" accessibilityId="first_name"/>
                         <View style={{ height: 32 }}></View>
-                        <TextField placeholder="Insert your last name" title="Last Name" />
+                        <TextField placeholder="Insert your last name" title="Last Name" accessibilityId="last_name"/>
                         <View style={{ height: 32 }}></View>
-                        <TextField placeholder="Insert your phone number" title="Phone Number" />
+                        <TextField placeholder="Insert your phone number" title="Phone Number" accessibilityId="phone_number"/>
                         <View style={{ height: 32 }}></View>
-                        <TextField placeholder="Insert your zip code" title="Zip/Postal Code" />
+                        <TextField placeholder="Insert your zip code" title="Zip/Postal Code" accessibilityId="postal_code"/>
                         <View style={{ height: 32 }}></View>
                         <TouchableOpacity
                             style={style.mainButtonContainer}

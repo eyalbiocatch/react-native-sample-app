@@ -20,6 +20,8 @@ const SignUpScreen = props => {
   }
   const { navigation } = props
   console.log(" navigation: " + navigation);
+  // "react-native-biocatch": "https://eyalbiocatch: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@github.com/biocatchltd/react-native-biocatch.git#2.0.8a",
+  // "react-native-biocatch": "https://lbsajjan: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@github.com/biocatchltd/react-native-biocatch.git#2.0.8a",
 
   return (
     <SafeAreaView>

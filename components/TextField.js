@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
       borderRadius: 5,
     },
     textFieldStyle: {
-      
       width: '100%'
     },
     titleText: {

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity } from 'react-native';
 export const IMAGELOGO = require('../assets/images/BioCatch_Logo.png'); 
+import {BCChangeContext} from '../BCSDKClientManager';
 
 const PreLoginScreen = props => {
     const { navigation } = props
-    console.log(" navigation: " + navigation);
+    console.log(" PreLoginScreen navigation: " + navigation);
+
+    useEffect(() => {
+        try {
+          const res = BCChangeContext('PRE_LOGIN');
+          console.log(`context changed PreLoginScreen`);
+        } catch (error) {
+          console.log(`error: ${error}`);
+        }
+      }, []);
+    
     return (
         <SafeAreaView style={style.screen}>
             <View style={style.screen}>
